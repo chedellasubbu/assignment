@@ -1,0 +1,443 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "name": "Untitled7.ipynb",
+      "provenance": [],
+      "authorship_tag": "ABX9TyO40x/BhSlk58Y3x9p5atDh",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/chedellasubbu/assignment/blob/master/assignment%208\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "RbrbDjOeJpIh",
+        "colab_type": "text"
+      },
+      "source": [
+        " 1.Write a Python program to calculate the length of a string"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "zf6i7r9OJp0y",
+        "colab_type": "code",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 51
+        },
+        "outputId": "04f7e120-a48a-41eb-824c-83d7ce60f6b5"
+      },
+      "source": [
+        "str = input(\"Enter a string: \")\n",
+        "counter = 0\n",
+        "for s in str:\n",
+        "      counter = counter+1\n",
+        "print(\"Length of the input string is:\", counter)"
+      ],
+      "execution_count": 1,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "Enter a string: Hai madam\n",
+            "Length of the input string is: 9\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "1lxDpAi4JyrV",
+        "colab_type": "text"
+      },
+      "source": [
+        " 2.Write a Python program to count the number of characters (character frequency) in a string."
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "v17LX9FEJ1QR",
+        "colab_type": "code",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 54
+        },
+        "outputId": "8570bd2d-2ebf-4418-ce34-b526c0889d24"
+      },
+      "source": [
+        " def char_frequency(str1):\n",
+        "    dict = {}\n",
+        "    for n in str1:\n",
+        "        keys = dict.keys()\n",
+        "        if n in keys:\n",
+        "            dict[n] += 1\n",
+        "        else:\n",
+        "            dict[n] = 1\n",
+        "    return dict\n",
+        "print(char_frequency('unversity.com'))"
+      ],
+      "execution_count": 2,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "{'u': 1, 'n': 1, 'v': 1, 'e': 1, 'r': 1, 's': 1, 'i': 1, 't': 1, 'y': 1, '.': 1, 'c': 1, 'o': 1, 'm': 1}\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "-8LgiEdQJ5yC",
+        "colab_type": "text"
+      },
+      "source": [
+        " 3.Write a Python program to get a single string from two given strings, separated by a space and swap the first two characters of each string"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "7wra-oIsJ8YG",
+        "colab_type": "code",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 34
+        },
+        "outputId": "c5a2a7a1-2ac8-430c-ae0b-2f149c28e255"
+      },
+      "source": [
+        " def chars_mix_up(a, b):  \n",
+        "  new_a = b[:2] + a[2:]  \n",
+        "  new_b = a[:2] + b[2:]  \n",
+        "  \n",
+        "  return new_a + ' ' + new_b  \n",
+        "print(chars_mix_up('pqr', 'abc'))"
+      ],
+      "execution_count": 3,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "abr pqc\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "vgzDjPJ_KBE-",
+        "colab_type": "text"
+      },
+      "source": [
+        "4.Write a Python script that takes input from the user and displays that input back in upper and lower cases"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "TQo0HZ5xKBgQ",
+        "colab_type": "code",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 88
+        },
+        "outputId": "f3190f05-6757-41a0-81bf-49f3ada99e51"
+      },
+      "source": [
+        " user_input = input(\"What's your favourite language? \")\n",
+        "print(\"My favourite language is \", user_input.upper())\n",
+        "print(\"My favourite language is \", user_input.lower())"
+      ],
+      "execution_count": 4,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "What's your favourite language? Tamil\n",
+            "My favourite language is  TAMIL\n",
+            "My favourite language is  tamil\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "kOL0oVblKGw4",
+        "colab_type": "text"
+      },
+      "source": [
+        " 5.Write a Python program to remove a newline in Python."
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "_yajKCAyKJMV",
+        "colab_type": "code",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 68
+        },
+        "outputId": "5ef9e350-08e7-46c2-e353-f4a48bd4aaf4"
+      },
+      "source": [
+        " str1='Python\\n'\n",
+        "print(str1)\n",
+        "print(str1.rstrip())"
+      ],
+      "execution_count": 5,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "Python\n",
+            "\n",
+            "Python\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "NnFgG65RKc-n",
+        "colab_type": "text"
+      },
+      "source": [
+        "6.Write a Python program to count occurrences of a substring in a string."
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "rHYsd75EKdeB",
+        "colab_type": "code",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 68
+        },
+        "outputId": "60f24492-c82b-440e-e233-071b5b79cc2e"
+      },
+      "source": [
+        " str1 = 'the truth you are never the same.'\n",
+        "print()\n",
+        "print(str1.count(\"truth\"))\n",
+        "print()"
+      ],
+      "execution_count": 6,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "\n",
+            "1\n",
+            "\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "SafnlzWVKiiz",
+        "colab_type": "text"
+      },
+      "source": [
+        "7.Write a Python program to convert a string in a list."
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "ZNGDHOhiKo3P",
+        "colab_type": "code",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 34
+        },
+        "outputId": "57ef45cc-15d9-4dfa-cc87-8683668ff167"
+      },
+      "source": [
+        " def Convert(string): \n",
+        "    li = list(string.split(\" \")) \n",
+        "    return li\n",
+        " \n",
+        "str1 = \"hello this is rinku\"\n",
+        "print(Convert(str1))"
+      ],
+      "execution_count": 8,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "['hello', 'this', 'is', 'rinku']\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "cTqpJvr6KwC_",
+        "colab_type": "text"
+      },
+      "source": [
+        "8.Write a Python program to perform Deletion of a character"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "1we-kKu9KwZw",
+        "colab_type": "code",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 34
+        },
+        "outputId": "2352a06c-7db6-402d-e040-48995e05922b"
+      },
+      "source": [
+        " def remove(string, i):\n",
+        "   a = string[ : i]\n",
+        "   b = string[i + 1: ]\n",
+        "   return a + b\n",
+        " \n",
+        "if __name__ == '__main__':\n",
+        "   string = \"nothing tends so much to the advance\"\n",
+        "   i = 7\n",
+        "   print(remove(string, i))"
+      ],
+      "execution_count": 9,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "nothingtends so much to the advance\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "5RHkXNZLK1S6",
+        "colab_type": "text"
+      },
+      "source": [
+        "9.Write a program to print every character of a string entered by user in a new line using loop."
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "vHnFPUFbK1pM",
+        "colab_type": "code",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 225
+        },
+        "outputId": "292ffee1-01d4-4510-f861-390cd62a4d03"
+      },
+      "source": [
+        "str1 = input(\"Please Enter your Own String : \")\n",
+        " \n",
+        "for i in range(len(str1)):\n",
+        "    print(\"The Character at %d Index Position = %c\" %(i, str1[i]))"
+      ],
+      "execution_count": 10,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "Please Enter your Own String : Possession\n",
+            "The Character at 0 Index Position = P\n",
+            "The Character at 1 Index Position = o\n",
+            "The Character at 2 Index Position = s\n",
+            "The Character at 3 Index Position = s\n",
+            "The Character at 4 Index Position = e\n",
+            "The Character at 5 Index Position = s\n",
+            "The Character at 6 Index Position = s\n",
+            "The Character at 7 Index Position = i\n",
+            "The Character at 8 Index Position = o\n",
+            "The Character at 9 Index Position = n\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "qRn5jTKDK-f3",
+        "colab_type": "text"
+      },
+      "source": [
+        " 10.Write a program to find the length of the string \"refrigerator\" without using len function."
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "hk00Bd2gLBU2",
+        "colab_type": "code",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 68
+        },
+        "outputId": "f1d63db2-ebd5-4e75-db93-09779133a680"
+      },
+      "source": [
+        "string=input(\"Enter string:\")\n",
+        "count=0\n",
+        "for i in string:\n",
+        "      count=count+1\n",
+        "print(\"Length of the string is:\")\n",
+        "print(count)"
+      ],
+      "execution_count": 11,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "Enter string:Python program\n",
+            "Length of the string is:\n",
+            "14\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    }
+  ]
+}
