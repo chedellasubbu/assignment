@@ -1,0 +1,652 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "name": "Untitled9.ipynb",
+      "provenance": [],
+      "authorship_tag": "ABX9TyPRpycwDfUFF1Qslep4jgN1",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/chedellasubbu/assignment/blob/master/assignment%2010\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "9RxSCkI4MXRb",
+        "colab_type": "text"
+      },
+      "source": [
+        " 1.Write a Python program to read an entire text file."
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "7U8ghO5yMYkh",
+        "colab_type": "code",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 34
+        },
+        "outputId": "5e9b0937-3bad-41bb-a325-b5e4dcefa527"
+      },
+      "source": [
+        "f=open(\"python.txt\",\"w\")\n",
+        "f.close()\n",
+        "f=open(\"python1.txt\",\"w\")\n",
+        "f.write(\"hi guys\")\n",
+        "f.close()\n",
+        "f=open(\"python1.txt\",\"r\")\n",
+        "str=f.read()\n",
+        "print(str)\n",
+        "f.close()"
+      ],
+      "execution_count": 1,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "hi guys\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "QGNS50k5Mgus",
+        "colab_type": "text"
+      },
+      "source": [
+        "2.Write a Python program to read first n lines of a file"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "o_FfIz5hMhTd",
+        "colab_type": "code",
+        "colab": {}
+      },
+      "source": [
+        " a_file=open(\"file_name.txt\",\"w\")\n",
+        "f.close()"
+      ],
+      "execution_count": 2,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "GbV-h9UBMueI",
+        "colab_type": "code",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 34
+        },
+        "outputId": "43dbae97-a2be-460d-d9d1-d8eee3e480a7"
+      },
+      "source": [
+        " a_file = open(\"file_name.txt\")\n",
+        "number_of_lines = 3\n",
+        "for i in range(number_of_lines):\n",
+        "    line = a_file.readline()\n",
+        "print(line)"
+      ],
+      "execution_count": 3,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "O5aC4Bm0M0Lw",
+        "colab_type": "text"
+      },
+      "source": [
+        "3.Write a Python program to append text to a file and display the text."
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "wTEv3O46M0mv",
+        "colab_type": "code",
+        "colab": {}
+      },
+      "source": [
+        "f=open(\"python.txt\",\"w\")\n",
+        "f.close()"
+      ],
+      "execution_count": 4,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "tmauAcExM3iI",
+        "colab_type": "code",
+        "colab": {}
+      },
+      "source": [
+        " f=open(\"python1.txt\",\"w\")\n",
+        "f.write(\"hi guys\")\n",
+        "f.close()"
+      ],
+      "execution_count": 5,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "O8tkKuHHM6ls",
+        "colab_type": "code",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 34
+        },
+        "outputId": "770abede-8358-49e4-cb97-8122666a7a19"
+      },
+      "source": [
+        " f=open(\"python1.txt\",\"r\")\n",
+        "print(f.read())\n",
+        "f.close()"
+      ],
+      "execution_count": 6,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "hi guys\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "eq1XentcNADE",
+        "colab_type": "code",
+        "colab": {}
+      },
+      "source": [
+        "f=open(\"python1.txt\",\"a\")\n",
+        "s='''am \n",
+        "   Fine'''\n",
+        "f.write(s)\n",
+        "f.close()"
+      ],
+      "execution_count": 7,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "Wk-SF3GvNCse",
+        "colab_type": "text"
+      },
+      "source": [
+        " 4.Write a Python program to read last n lines of a file."
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "otpwbgqxNEOQ",
+        "colab_type": "code",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 34
+        },
+        "outputId": "3839945e-5fc4-448b-905b-d75442ddbbcf"
+      },
+      "source": [
+        " def LastNlines(fname, N):\n",
+        "  with open(fname) as file:\n",
+        "    for line in (file.readlines() [-N:]):\n",
+        "      print(line, end ='')\n",
+        "if __name__ == '__main__':\n",
+        "  fname = 'File1.txt'\n",
+        "  N = 3\n",
+        "  try:\n",
+        "   LastNlines(fname, N) \n",
+        "  except:\n",
+        "   print('File found')"
+      ],
+      "execution_count": 8,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "File found\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "0ZpD58HnNJ2N",
+        "colab_type": "text"
+      },
+      "source": [
+        "5.Write a Python program to read a file line by line store it into a variable."
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "uyHJ__hMNKS1",
+        "colab_type": "code",
+        "colab": {}
+      },
+      "source": [
+        " f1=open(\"test.txt\",\"w\")\n",
+        "f.close()"
+      ],
+      "execution_count": 9,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "ojepX099NOKl",
+        "colab_type": "code",
+        "colab": {}
+      },
+      "source": [
+        " f1=open(\"test1.txt\",\"w\")\n",
+        "f1.write(\"python program\")\n",
+        "f.close()"
+      ],
+      "execution_count": 10,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "841xuXlgNRBo",
+        "colab_type": "code",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 34
+        },
+        "outputId": "4d100570-e3dd-4236-a9d3-a6a403f934ad"
+      },
+      "source": [
+        " f1=open('test1.txt').readlines()\n",
+        "print(f1)"
+      ],
+      "execution_count": 11,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "[]\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "vAlj58dKNaBr",
+        "colab_type": "text"
+      },
+      "source": [
+        " 6.write a program to read a file line by line store it into a list"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "_hND6yfxNawV",
+        "colab_type": "code",
+        "colab": {}
+      },
+      "source": [
+        " infile=open(\"test.txt\",\"w\")\n",
+        "f.close()"
+      ],
+      "execution_count": 12,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "9y7tdlUtNdxk",
+        "colab_type": "code",
+        "colab": {}
+      },
+      "source": [
+        " infile=open(\"test1.txt\",\"w\")\n",
+        "infile.write(\"python\")\n",
+        "f.close()"
+      ],
+      "execution_count": 13,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "cHlmmJQoNhJd",
+        "colab_type": "code",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 34
+        },
+        "outputId": "cbfcc92b-ae03-4df9-dfad-228c2d285339"
+      },
+      "source": [
+        " infile = \"test1.txt\"\n",
+        "content_list = open(infile).readlines()\n",
+        "print (content_list)"
+      ],
+      "execution_count": 14,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "['python']\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "6QIV5_avNpUQ",
+        "colab_type": "text"
+      },
+      "source": [
+        "7.write a python program to read a file line by line store it into a array."
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "UhzGMUBYNptU",
+        "colab_type": "code",
+        "colab": {}
+      },
+      "source": [
+        " f2=open(\"test1.txt\",\"w\")\n",
+        "f.close()"
+      ],
+      "execution_count": 15,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "EnNxWcs8NtOl",
+        "colab_type": "code",
+        "colab": {}
+      },
+      "source": [
+        " f2=open(\"test1.txt\",\"w\")\n",
+        "s='''welcome\n",
+        "      to\n",
+        "     Python'''\n",
+        "f2.write(s)\n",
+        "f.close()"
+      ],
+      "execution_count": 16,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "Dh4Im8CeNw4n",
+        "colab_type": "code",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 54
+        },
+        "outputId": "662110d6-f1e7-4430-fc95-62766663d32d"
+      },
+      "source": [
+        " f2=(\"test1.txt\")\n",
+        "content_array=open(f2).readlines()\n",
+        "print(content_array)"
+      ],
+      "execution_count": 17,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "['welcome\\n', '     to\\n', '    Python']\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "E-vyjfqYN2X8",
+        "colab_type": "text"
+      },
+      "source": [
+        "8.Write a Python program to count the number of lines in a text file."
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "PIM90iuPN2z6",
+        "colab_type": "code",
+        "colab": {}
+      },
+      "source": [
+        " f3=open(\"file.txt\",\"w\")\n",
+        "f3.close()"
+      ],
+      "execution_count": 18,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "P4ElDq7-N5xa",
+        "colab_type": "code",
+        "colab": {}
+      },
+      "source": [
+        " f3=open(\"file.txt\",\"w\")\n",
+        "s='''i\n",
+        "     like to\n",
+        "     Code'''\n",
+        "f3.write(s)\n",
+        "f3.close()"
+      ],
+      "execution_count": 19,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "k-arZ2rgN9BJ",
+        "colab_type": "code",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 34
+        },
+        "outputId": "a43b7c0e-af0a-4a48-d935-5d130fb01fab"
+      },
+      "source": [
+        " f3=open(\"file.txt\",\"r\")\n",
+        "s=f3.read()\n",
+        "print(len(s.split('\\n')))\n",
+        "f.close()"
+      ],
+      "execution_count": 20,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "3\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "AiHz-lnlOC1U",
+        "colab_type": "text"
+      },
+      "source": [
+        "9.write a python program to get the file size of a plain file."
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "qtpyhQl7ODPd",
+        "colab_type": "code",
+        "colab": {}
+      },
+      "source": [
+        " file=open(\"test.txt\",\"w\")\n",
+        "f.close()"
+      ],
+      "execution_count": 21,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "9LGeo8zKOGp-",
+        "colab_type": "code",
+        "colab": {}
+      },
+      "source": [
+        " file=open(\"test.txt\",\"w\")\n",
+        "file.write(\"programming\")\n",
+        "f.close()"
+      ],
+      "execution_count": 22,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "SNTtR_pAOMEi",
+        "colab_type": "code",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 34
+        },
+        "outputId": "a82293e2-69a0-4d97-e158-755b6d31a3e2"
+      },
+      "source": [
+        "import os\n",
+        "os.path.getsize(\"test.txt\")"
+      ],
+      "execution_count": 24,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "0"
+            ]
+          },
+          "metadata": {
+            "tags": []
+          },
+          "execution_count": 24
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "yGwL2BeCOQZt",
+        "colab_type": "text"
+      },
+      "source": [
+        " 10.write a python program to copy the contents of a file into another."
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "jUDotNnhOTEX",
+        "colab_type": "code",
+        "colab": {}
+      },
+      "source": [
+        "file1=open(\"f1.txt\",\"w\")\n",
+        "file1.close()"
+      ],
+      "execution_count": 25,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "qJIj1KmqOV_o",
+        "colab_type": "code",
+        "colab": {}
+      },
+      "source": [
+        " file1=open(\"f1.txt\",\"w\")\n",
+        "s='''welcome \n",
+        "     to programming\n",
+        "     world'''\n",
+        "file1.write(s)\n",
+        "file1.close()"
+      ],
+      "execution_count": 26,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "870hys5VOZm_",
+        "colab_type": "code",
+        "colab": {}
+      },
+      "source": [
+        " file2=open(\"f2.txt\",\"w\")\n",
+        "file1=open(\"f1.txt\",\"r\")\n",
+        "for line in file1:\n",
+        "  file2.write(line)\n",
+        "file1.close()\n",
+        "file2.close()"
+      ],
+      "execution_count": 27,
+      "outputs": []
+    }
+  ]
+}
