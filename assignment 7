@@ -1,0 +1,248 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "name": "Untitled",
+      "provenance": [],
+      "authorship_tag": "ABX9TyMpAKb9pB5LbQ6XUbKOoTGt",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/chedellasubbu/assignment/blob/master/assignment%207\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "b7pTLkv-HIB0",
+        "colab_type": "text"
+      },
+      "source": [
+        " 1.Python program to find the square root."
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "GUUzhqDIHg3z",
+        "colab_type": "code",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 51
+        },
+        "outputId": "777d2141-674d-4317-cce1-c6cdb71a0933"
+      },
+      "source": [
+        "number = int(input(\"enter a number: \"))\n",
+        "sqrt = number ** 0.5\n",
+        "print(\"square root\", sqrt)"
+      ],
+      "execution_count": 4,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "enter a number: 37\n",
+            "square root 6.082762530298219\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "edlZ8rnUHqqe",
+        "colab_type": "text"
+      },
+      "source": [
+        " 2.python program to check if number a postive, negative or zero."
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "zP9ekj6aHvpT",
+        "colab_type": "code",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 51
+        },
+        "outputId": "f74ebb6d-8662-4a65-e3de-a15fc920f914"
+      },
+      "source": [
+        " n=int(input(\"enter the number\"))\n",
+        " if n>0:\n",
+        "  print(\"It is postive number \") \n",
+        " elif n==0:\n",
+        "  print(\" Zero\")\n",
+        "else:\n",
+        "  print(\"It is negative number \")"
+      ],
+      "execution_count": 6,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "enter the number-5\n",
+            "It is negative number \n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "1t_anF_tH5l8",
+        "colab_type": "text"
+      },
+      "source": [
+        "3.python program to check leap year."
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "D8141PqyH6Dn",
+        "colab_type": "code",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 51
+        },
+        "outputId": "5880b9b5-da9e-4b31-f895-92f4ea03badd"
+      },
+      "source": [
+        "year=int(input(\"Enter a year\"))\n",
+        "if year % 4 == 0 and year % 100 != 0:\n",
+        "    print(year, \"is a Leap Year\")\n",
+        "elif year % 100 == 0:\n",
+        "    print(year, \"is not a Leap Year\")\n",
+        "elif year % 400 ==0:\n",
+        "    print(year, \"is a Leap Year\")\n",
+        "else:\n",
+        "    print(year, \"is not a Leap Year\")"
+      ],
+      "execution_count": 7,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "Enter a year2020\n",
+            "2020 is a Leap Year\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "8nWtRhxCIvo0",
+        "colab_type": "text"
+      },
+      "source": [
+        " 5.python program to check Armstrong number."
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "ZTQZ95IjIywF",
+        "colab_type": "code",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 51
+        },
+        "outputId": "49fcebc0-a4f3-49a5-8f9b-b86863afb64e"
+      },
+      "source": [
+        " num = int(input(\"Enter a number: \"))\n",
+        "sum = 0\n",
+        "temp = num\n",
+        "while temp > 0:\n",
+        "   digit = temp % 10\n",
+        "   sum += digit ** 3\n",
+        "   temp //= 10\n",
+        "if num == sum:\n",
+        "   print(num,\"is an Armstrong number\")\n",
+        "else:\n",
+        "   print(num,\"is not an Armstrong number\")"
+      ],
+      "execution_count": 17,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "Enter a number: 143\n",
+            "143 is not an Armstrong number\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "5Mtu5u4dI7aS",
+        "colab_type": "text"
+      },
+      "source": [
+        "6.python program to find Armstrong number in an interval."
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "HNwZDsKOJEA5",
+        "colab_type": "code",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 119
+        },
+        "outputId": "7cd68458-01af-422d-ea17-865a69f78df6"
+      },
+      "source": [
+        " lower = int(input(\"Enter lower range: \"))\n",
+        "upper = int(input(\"Enter upper range: \"))\n",
+        "for num in range(lower,upper + 1):\n",
+        "  sum = 0\n",
+        "  temp = num\n",
+        "  while temp > 0:\n",
+        "       digit = temp % 10\n",
+        "       sum += digit ** 3\n",
+        "       temp //= 10\n",
+        "  if num == sum:\n",
+        "       print(num)"
+      ],
+      "execution_count": 19,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "Enter lower range: 50\n",
+            "Enter upper range: 1000\n",
+            "153\n",
+            "370\n",
+            "371\n",
+            "407\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    }
+  ]
+}
