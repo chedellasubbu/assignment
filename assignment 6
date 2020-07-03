@@ -1,0 +1,405 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "name": "Untitled6.ipynb",
+      "provenance": [],
+      "authorship_tag": "ABX9TyOR2vYHBTFx/tIHezI8Pu8+",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/chedellasubbu/assignment/blob/master/assignment%206\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "PJviRs6DCQpN",
+        "colab_type": "text"
+      },
+      "source": [
+        "Convert binary number to decimal"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "ADRtEy0-Ch6O",
+        "colab_type": "code",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 71
+        },
+        "outputId": "f8ba4924-e475-4bab-bf24-b757869b7e20"
+      },
+      "source": [
+        "b_num=list(input(\"Enter a binary number\")) \n",
+        "value=0\n",
+        "for i in range(len(b_num)):\n",
+        " digit=b_num.pop() \n",
+        " if digit=='1':\n",
+        "   value =value+pow(2, i) \n",
+        "print(\"The decimal value if the number is\",value)"
+      ],
+      "execution_count": 2,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "Enter a binary number101010\n",
+            "The decimal value if the number is 42\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "S3iHmmN5Cwrj",
+        "colab_type": "text"
+      },
+      "source": [
+        "Generate first N number of Fibonacci numbers. Take N value from user"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "yiw_1kdJCxVT",
+        "colab_type": "code",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 71
+        },
+        "outputId": "54a4a670-6179-4a6b-93c8-ee2031fd8322"
+      },
+      "source": [
+        " n=int(input(\"Enter the value of n \")) \n",
+        "a=0\n",
+        "b=1\n",
+        "sum=0\n",
+        "count=1\n",
+        "print(\"Fibonacci series\",end=\"\") \n",
+        "while (count<=n):\n",
+        "  print(sum, end=\"\") \n",
+        "  count+=1\n",
+        "  a=b\n",
+        "  b=sum\n",
+        "  sum=a+b"
+      ],
+      "execution_count": 3,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "Enter the value of n 42\n",
+            "Fibonacci series01123581321345589144233377610987159725844181676510946177112865746368750251213931964183178115142298320401346269217830935245785702887922746514930352241578173908816963245986102334155165580141"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "_8AcoFvFC-t-",
+        "colab_type": "text"
+      },
+      "source": [
+        " 3.Display multiplication table of K. Take k value from user"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "3vDvNqMWDBnh",
+        "colab_type": "code",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 205
+        },
+        "outputId": "0e4c119b-41bf-41b5-ad2f-652b64c9a7d4"
+      },
+      "source": [
+        " k= int(input(\"Show the multiplication table of \"))   \n",
+        "for i in range(1,11):  \n",
+        "   print(k,'x',i,'=',k*i)"
+      ],
+      "execution_count": 4,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "Show the multiplication table of 6\n",
+            "6 x 1 = 6\n",
+            "6 x 2 = 12\n",
+            "6 x 3 = 18\n",
+            "6 x 4 = 24\n",
+            "6 x 5 = 30\n",
+            "6 x 6 = 36\n",
+            "6 x 7 = 42\n",
+            "6 x 8 = 48\n",
+            "6 x 9 = 54\n",
+            "6 x 10 = 60\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "2A6TMXjXDgCE",
+        "colab_type": "text"
+      },
+      "source": [
+        " 4.Take 10 integers from keyboard using loop and print their average value on the screen Print the following patterns using loop : * \n",
+        " ** \n",
+        " *** \n",
+        " ****"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "KAJoZ09UDiPU",
+        "colab_type": "code",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 444
+        },
+        "outputId": "5fa32211-605f-4f46-c05f-ca3547de41fb"
+      },
+      "source": [
+        " sum = 0\n",
+        " \n",
+        "i = 10\n",
+        "while i>0:\n",
+        "  print (\"Enter number\")\n",
+        "  num = int(input())\n",
+        "  sum = sum + num\n",
+        "  i = i-1\n",
+        "print (\"average is\",sum/10.0)\n",
+        "# to print the patern\n",
+        "i = 1\n",
+        "while i<=4:\n",
+        "  print (\"*\"*i)\n",
+        "  i = i+1"
+      ],
+      "execution_count": 5,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "Enter number\n",
+            "1\n",
+            "Enter number\n",
+            "2\n",
+            "Enter number\n",
+            "3\n",
+            "Enter number\n",
+            "4\n",
+            "Enter number\n",
+            "5\n",
+            "Enter number\n",
+            "6\n",
+            "Enter number\n",
+            "7\n",
+            "Enter number\n",
+            "8\n",
+            "Enter number\n",
+            "9\n",
+            "Enter number\n",
+            "10\n",
+            "average is 5.5\n",
+            "*\n",
+            "**\n",
+            "***\n",
+            "****\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "h-W24rLbD0dK",
+        "colab_type": "text"
+      },
+      "source": [
+        "5.Write a program to find greatest common divisor (GCD) or highest common factor (HCF) of given two numbers."
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "HJ5LZcJuD1DM",
+        "colab_type": "code",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 68
+        },
+        "outputId": "20163d0e-be92-4e75-9473-b92dae89b51e"
+      },
+      "source": [
+        " num1=int(input(\"enter 1st number:\"))\n",
+        "num2=int(input(\"enter 2nd number:\"))\n",
+        "i=1\n",
+        "while(i <= num1 and i <= num2):\n",
+        "  if(num1 % i==0 and num2 % i==0):\n",
+        "    gcd=i\n",
+        "  i=i+1\n",
+        "print(\"GCD is\", gcd)"
+      ],
+      "execution_count": 6,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "enter 1st number:12\n",
+            "enter 2nd number:16\n",
+            "GCD is 4\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "Z83syhRaEHNy",
+        "colab_type": "text"
+      },
+      "source": [
+        " 6.Write a Python program that accepts a word from the user and reverse it."
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "8sD095BPEJ7e",
+        "colab_type": "code",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 51
+        },
+        "outputId": "193751b6-a4bd-4214-9174-314c5793d714"
+      },
+      "source": [
+        " word=input(\"input a word to reverse:\")\n",
+        " \n",
+        "for char in range(len(word)-1,-1,-1):\n",
+        "  print(word[char],end=\"\")"
+      ],
+      "execution_count": 7,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "input a word to reverse:Madam\n",
+            "madaM"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "ShdFokrlETVv",
+        "colab_type": "text"
+      },
+      "source": [
+        "7.Write a Python program to count the number of even and odd numbers from a series of numbers."
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "N4JYi0nDET3J",
+        "colab_type": "code",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 51
+        },
+        "outputId": "0be430d9-5848-49dc-e42c-cf4a80943e08"
+      },
+      "source": [
+        " numbers=(1,2,3,4,5,6,7,8,9,10)\n",
+        "count_odd=0\n",
+        "count_even=0\n",
+        "for x in numbers:\n",
+        "     if not x % 2:\n",
+        "        count_even+=1\n",
+        "     else:\n",
+        "        count_odd+=1\n",
+        "print(\"number of even numbers:\",count_even)\n",
+        "print(\"number of odd numbers:\",count_odd)"
+      ],
+      "execution_count": 8,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "number of even numbers: 5\n",
+            "number of odd numbers: 5\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "Eh6kddAxE46I",
+        "colab_type": "text"
+      },
+      "source": [
+        "8.Write a Python program that prints all the numbers from 0 to 6 except 3 and 6."
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "HmQeqrWOE5az",
+        "colab_type": "code",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 34
+        },
+        "outputId": "6154b772-7249-4ed1-b8e8-ca6cc840e67c"
+      },
+      "source": [
+        "for x in range(6):\n",
+        "   if (x==3 or x==6):\n",
+        "     continue\n",
+        "   print(x,end =\"\")"
+      ],
+      "execution_count": 9,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "01245"
+          ],
+          "name": "stdout"
+        }
+      ]
+    }
+  ]
+}
