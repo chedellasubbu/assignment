@@ -1,0 +1,388 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "name": "Untitled",
+      "provenance": [],
+      "authorship_tag": "ABX9TyOd2Bmq9MyZcmhZEdxkXyVv",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/chedellasubbu/assignment/blob/master/Untitled.%20321910305037\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "TPosljHdTeu9"
+      },
+      "source": [
+        " Find minimum among three nunbers"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "dohf18qETfo2",
+        "outputId": "349efa99-cee5-41c8-ef2c-7053e995d6ec",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 34
+        }
+      },
+      "source": [
+        "a,b,c=2,4,6\n",
+        "if(a<=b and a<=c):\n",
+        "  print(a,\"is the smallest\")\n",
+        "elif(b<=a and b<=c):\n",
+        "  print(b,\"is the smallest\")\n",
+        "else:\n",
+        "  print(c,\"is the smallest\")"
+      ],
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "2 is the smallest\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "AnsCoML5TpRO"
+      },
+      "source": [
+        " Find the GCD and LCM of two/three nunbers"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "IFgVHePPTqI_",
+        "outputId": "0ae360ed-1e3e-4af4-fa14-dcf4104b372a",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 34
+        }
+      },
+      "source": [
+        "def compute_gcd(x,y):\n",
+        "  while(y):\n",
+        "    x,y=y,x%y\n",
+        "  return x\n",
+        "def compute_lcm(x,y):\n",
+        "  lcm=(x*y)//compute_gcd(x,y)\n",
+        "  return lcm\n",
+        "num1=28\n",
+        "num2=92\n",
+        "print(\"The L.C.M. is\",compute_lcm(num1,num2))"
+      ],
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "The L.C.M. is 644\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "pe5dwNvvT2Ci"
+      },
+      "source": [
+        "Check whether the given number is  perfect"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "qguoM0iYT2hS",
+        "outputId": "7dc0e755-e848-4104-dc89-7846212ba49c",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 51
+        }
+      },
+      "source": [
+        "n=int(input(\"Enter any number\"))\n",
+        "sum1=0\n",
+        "for i in range(1,n):\n",
+        "  if(n%i==0):\n",
+        "    sum1=sum1+i\n",
+        "  if(sum1==n):\n",
+        "    print(\"The number is a perfect number\")\n",
+        "  else:\n",
+        "    print(\"The number is not a perfect number\")"
+      ],
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "Enter any number2\n",
+            "The number is not a perfect number\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "QVrSUc8iUAmG"
+      },
+      "source": [
+        " Print twin primes upto specified limit"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "Jj4ctkJUUG4z",
+        "outputId": "cee28a5b-ba4b-45a2-fab5-fc0bb81f70bd",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 205
+        }
+      },
+      "source": [
+        "def is_prime(n):\n",
+        "  for i in range(2,n):\n",
+        "    if n%i==0:\n",
+        "      return False\n",
+        "    return True\n",
+        "def generate_twins(start,end):\n",
+        "  for i in range(start,end):\n",
+        "    j=i+2\n",
+        "    if(is_prime(i) and is_prime(j)):\n",
+        "      print(\"{:d} and {:d}\".format(i,j))\n",
+        "generate_twins(2,25)"
+      ],
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "3 and 5\n",
+            "5 and 7\n",
+            "7 and 9\n",
+            "9 and 11\n",
+            "11 and 13\n",
+            "13 and 15\n",
+            "15 and 17\n",
+            "17 and 19\n",
+            "19 and 21\n",
+            "21 and 23\n",
+            "23 and 25\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "uJMsDDYKxcLL"
+      },
+      "source": [
+        " Print the prime numbers upto specified limit"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "PBlNl7fM0PcG",
+        "outputId": "0cfb5a1a-044f-428a-ca21-c2a776dbd1cf",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 205
+        }
+      },
+      "source": [
+        " \n",
+        "lower=2\n",
+        "upper=10\n",
+        "print(\"prime numbers between\",lower, \"and\", upper, \"are:\")\n",
+        "for num in range(lower,upper+1):\n",
+        "  if num>1:\n",
+        "    for i in range(2,num):\n",
+        "      if(num%i)==0:\n",
+        "        break\n",
+        "      else:\n",
+        "        print(num)"
+      ],
+      "execution_count": 3,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "prime numbers between 2 and 10 are:\n",
+            "3\n",
+            "5\n",
+            "5\n",
+            "5\n",
+            "7\n",
+            "7\n",
+            "7\n",
+            "7\n",
+            "7\n",
+            "9\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "bkTfKxdv0RR2"
+      },
+      "source": [
+        " Find the sum of digits of the nunbers.Check the whether the given number is Armstrong number Or not"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "SZynBBWp0fZs",
+        "outputId": "d6cb0afe-9a53-4221-82ae-ba5f3baf7fc8",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 51
+        }
+      },
+      "source": [
+        "num=int(input(\"Enter a number:\"))\n",
+        "sum=0\n",
+        "temp=num\n",
+        "while temp>0:\n",
+        "  digit=temp%10\n",
+        "  sum+=digit**3\n",
+        "  temp//=10\n",
+        "if num==sum:\n",
+        "  print(num,\"is an Armstong number\")\n",
+        "else:\n",
+        "  print(num,\"is not an Armstong number\")"
+      ],
+      "execution_count": 6,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "Enter a number:5\n",
+            "5 is not an Armstong number\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "6XcXMwm004go"
+      },
+      "source": [
+        " Swapping of two numbers"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "g1fKS2hD07ds",
+        "outputId": "0c4217c7-1822-4f43-874c-b7a6eac97ec3",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 51
+        }
+      },
+      "source": [
+        "x=4\n",
+        "y=2\n",
+        "temp=x\n",
+        "x=y\n",
+        "y=temp\n",
+        "print('The value of x after swapping: {}'.format(x))\n",
+        "print('The value of y after swapping: {}'.format(y))"
+      ],
+      "execution_count": 7,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "The value of x after swapping: 2\n",
+            "The value of y after swapping: 4\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "WkIchVRb0-RN"
+      },
+      "source": [
+        " Preforms all of the Five Arithmetic Operations"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "k1dtFq8A1AXI",
+        "outputId": "02b5264c-30bc-4b16-e5cf-846966900baf",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 119
+        }
+      },
+      "source": [
+        "num1=input('Enter first number:')\n",
+        "num2=input('Enter second number:')\n",
+        "sum =float(num1)+float(num)\n",
+        "sub =float(num1)-float(num2)\n",
+        "mul =float(num1)*float(num2)\n",
+        "div =float(num1)/float(num2)\n",
+        "print(\"The Addition of {0} and {1} is {2}\".format(num1,num2,sum))\n",
+        "print(\"The subtraction of {0} and {1} is {2}\".format(num1,num2,sub))\n",
+        "print(\"The multiplication of {0} and {1} is {2}\".format(num1,num2,mul))\n",
+        "print(\"The division of {0} and {1} is {2}\".format(num1,num2,div))"
+      ],
+      "execution_count": 8,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "Enter first number:1\n",
+            "Enter second number:2\n",
+            "The Addition of 1 and 2 is 6.0\n",
+            "The subtraction of 1 and 2 is -1.0\n",
+            "The multiplication of 1 and 2 is 2.0\n",
+            "The division of 1 and 2 is 0.5\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    }
+  ]
+}
